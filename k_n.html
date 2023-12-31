@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="1.js">
+		<style type="text/css">
+			body{
+				background:url(img/1.jpg) top center ;
+				background-size: contain;
+			
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				border:0 ;
+			}
+			#like {
+				width: 50vh;
+				height: 10vh;
+				position: relative;
+				color: white;
+				font-size: 70px;
+				
+				font-weight: bold;
+				text-align: center;
+				margin: 0 auto;
+				font-family: 宋体;
+				margin-top: 40px;
+			}
+			#love{
+				margin-top:30px;
+				border-radius: 25px;
+				width: 700px;
+				height:80px;
+				text-decoration: none;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: -150px;
+				padding-top: 55px;
+				color: aliceblue;
+				font-size: 40px;}
+				#xn{
+					width: 25vh;
+					height:60vh;
+					font-family: 宋体;
+					border: 1px solid white;
+					overflow: hidden;
+					padding: 2vw;
+					border-radius: 3vw;
+					background: url(img/2.jpg) repeat-y;
+					background-size: cover;
+					box-shadow: 1vw 4vw 3vw #fdd5fd,1vw 2vw 3vw #d16cb8;
+					margin: 0 auto;
+					margin-top: 30px;
+					color: aliceblue;
+					font-size: 4vw;
+					padding: 120px;
+					text-align: center;
+					font-weight: bold;
+				}
+				@media (max-width:768px) {
+			body{
+				background:url(img/bg1.jpg)no-repeat;
+				background-size: cover;
+			}
+			#xn{
+					box-shadow: 1vw 1vw 3vw #fdd5fd,1vw 1vw 3vw #fdd5fd;
+					
+
+				}
+
+		}
+		</style>
+	</head>
+	<body>
+		<div id="like">跨年快乐</div>
+		<div id="love"></div>
+		<div id="xn">迎接倒计时</div>
+		
+		<div class="">
+			
+		</div>
+		<script>
+			function djstime(){
+				var now=new Date()
+				var now1=Date.parse("2024.1.1")
+				var time=(now1-now)/1000
+				var d=parseInt(time/3600/24)
+				var h=parseInt(time/3600%24)
+				var m=parseInt(time/60%60)
+				var s=parseInt(time%60)
+				var time1=`${d}天${h}时${m}分${s}秒`
+				if(now>now1){
+				clearInterval(jsq)
+				document.getElementById("love").innerHTML="2024年新年快乐"
+			}				
+				else
+				document.getElementById("love").innerHTML="距离跨年还有"+time1
+			}
+				jsq=setInterval("djstime()",400)
+			now=new Date()
+			now1=new Date("2024/1/1")	
+			
+			if(now>now1){  
+				
+			}
+
+		</script>
+		<script src="background.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
